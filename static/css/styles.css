@@ -1,0 +1,74 @@
+
+h1 { font-size: 3rem }
+h2 { font-size: 1.75rem }
+h3 { font-size: 1.25rem }
+h4 { font-size: 0.75rem }
+
+body {
+	color: white;
+	background: #000040;
+	box-sizing: border-box;
+	font-size: 12px;
+	margin: 0;
+}
+
+header {
+	position: fixed;
+	height: 64px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: #000080;
+	font-family: 'Cherry Swash', cursive;
+	z-index: 5;
+	border-bottom: 1px solid black;
+}
+
+.scrollable {
+	position: relative;
+	top: 64px;
+	min-height: 2000px; /* just for testing */
+}
+
+#logo {
+  /* height: 20px; */
+  font-size: 20px;
+}
+
+#logo img {
+	filter: invert(1);
+	margin: 0px 10px;
+}
+
+#logo-text {
+	color: cornflowerblue;
+	font-weight: bold;
+	font-family: 'Cherry Swash', cursive;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+#logo, nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+nav {
+	  margin: 0px 20px;
+}
+
+nav a {
+	margin: 2px 10px;
+	text-decoration: none; /* no tacky underline */
+	font-size: 16px;
+	color: cornflowerblue;
+	background: #000080;
+}
+

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <script>document.title = "{{docbag.title}}"</script>
+    {# commented out: <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css')}}"> #}
+    {# If css doesn't work reload using Shift+Ctrl+R (clears cache) #}
+{% endblock %}
+
+{% block header %}
+
+<div id="logo">
+	<img id="logo-pic" src="{{ url_for('static', filename='images/ic-logo.svg')}}">
+	<div id="logo-text"><p>Flask WebApp</p></div>
+</div>
+
+<nav>
+	<a id="link01" href="#">Home</a>
+	<a id="link02" href="#">About</a>
+	<a id="link03" href="#">Forum</a>
+	<a id="link04" href="#">Contact</a>
+	<a id="link05" href="#">Log Out</a>
+	<div class="animation start-home"></div>
+</nav>
+
+{% endblock %}
+
+{% block main %}
+<h1>Main Area Content</h1>
+<h2>Some basic H2 text</h2>
+{% endblock %}
+
+{% block afterbody %}
+{% endblock %}
