@@ -1,8 +1,3 @@
-# Source: http://flask.pocoo.org/docs/1.0/patterns/packages/
-# What I learned:
-# - Flask variables in javascript must be in quotes.
-# - 
-# - 
 
 from flask import Flask, render_template
 

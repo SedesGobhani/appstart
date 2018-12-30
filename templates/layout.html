@@ -2,7 +2,9 @@
 
 <html>
   <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/menu.js')}}"></script>
     <link rel="icon" type="image/png" href="/static/favicon.ico">
     <link rel="stylesheet" type="text/css" href="./static/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./static/css/styles.css">
@@ -23,37 +25,7 @@
       {% block footer %}
       {% endblock %}
     </footer>
-
-  <script type="text/javascript">
-
-$(document).ready(function(){
-  // alert("The width is " + $('#link01').width());
-  $( "#link01 ").css("color", "purple");
-  $( "a" ).each(function(i) {
-    $(this).click(function() {
-      $(this).siblings().each(function(i) {
-        $(this).css("color", "");
-      })
-      $(this).css("color", "purple");
-    });
-
-  $( this ).hover(
-    function() {
-      $( this ).css("background-color", "green");
-    },
-    function(){
-      $( this ).css("background-color", "");
-    }
-    );
-
-  });
-
-});
-
-
-  </script>
-
-  </body>
-    {% block afterbody %}
+    {% block endbody %}
     {% endblock %}
+  </body>
 </html>
