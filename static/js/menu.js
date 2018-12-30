@@ -1,31 +1,25 @@
+
   $(document).ready(function(){
+
     $( "a" ).each(function(i) {
-      $(this).click(function() {
+
+      $(this).click(function() {  // click occurred
         $(this).siblings().each(function(i) {
-          $(this).css("color", "");
+          $(this).css("background", "");
           $(this).data("selected", false);
-          // $(this).css("border", "");
+          $(this).css("color", "");
         })
-        $(this).css("color", "#FFD700");
+        $(this).css("background", "#5c0a0a");
         $(this).data("selected", true);
-        // $(this).css("border", "1px solid #FFD700");
       });
 
     $(this).hover(
-      function() {
-        $(this).css("background-color", "#6495ED");
-        $(this).css("font-weight", "bold");
-        if( $(this).data("selected") ) {
-          $(this).css("color", "#FFD700");
-        } else {
-          $(this).css("color", "#0000C0");
-        }
+      function() { // hover activated
+        $(this).css("color", "tomato");
       },
-      function(){
-        $(this).css("background-color", "#0000C0");
-        $(this).css("font-weight", "normal");
+      function(){ // hover deactivated
         if( $(this).data("selected") ) {
-          $(this).css("color", "#FFD700");
+          $(this).css("color", "#tomato");
         } else {
           $(this).css("color", "");
         }
