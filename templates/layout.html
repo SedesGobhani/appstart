@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{{url_for('static', filename='js/menu.js')}}"></script>
     <script type=text/javascript>
-      var menuItems = {{docbag.menu|tojson|safe}};
+      var menuItems = {{menu|tojson|safe}};
     </script>
     <link rel="icon" type="image/png" href="/static/favicon.ico">
     <link rel="stylesheet" type="text/css" href="./static/css/reset.css">
