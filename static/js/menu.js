@@ -1,19 +1,10 @@
 
   $(document).ready(function(){
 
-
-    var menuItems = new Array( // array of objects
-      {name:"Home", href:"#"},
-      {name:"About", href:"#"},
-      {name:"Forum", href:"#"},
-      {name:"Contact", href:"#"},
-      {name:"Log Out", href:"#"}
-      );
-
+    //console.log(menuItems); // debug
     var n;
     for (n=0; n<menuItems.length; n++) {
-      var newlink = '<a href="' + menuItems[n].href + '">' + menuItems[n].name + '</a>';
-      console.log(newlink);
+      var newlink = "<a href=" + menuItems[n].href + ">" + menuItems[n].name + "</a>";
       $("nav").append(newlink);
     }
 
