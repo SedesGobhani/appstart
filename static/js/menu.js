@@ -1,6 +1,22 @@
 
   $(document).ready(function(){
 
+
+    var menuItems = new Array( // array of objects
+      {name:"Home", href:"#"},
+      {name:"About", href:"#"},
+      {name:"Forum", href:"#"},
+      {name:"Contact", href:"#"},
+      {name:"Log Out", href:"#"}
+      );
+
+    var n;
+    for (n=0; n<menuItems.length; n++) {
+      var newlink = '<a href="' + menuItems[n].href + '">' + menuItems[n].name + '</a>';
+      console.log(newlink);
+      $("nav").append(newlink);
+    }
+
     $( "a" ).each(function(i) {
 
       $(this).click(function() {  // click occurred
