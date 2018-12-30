@@ -5,11 +5,11 @@
 
       $(this).click(function() {  // click occurred
         $(this).siblings().each(function(i) {
-          $(this).css("background", "");
+          $(this).css("border", "");
           $(this).data("selected", false);
           $(this).css("color", "");
         })
-        $(this).css("background", "#5c0a0a");
+        $(this).css("border", "1px solid tomato");
         $(this).data("selected", true);
       });
 
@@ -19,7 +19,7 @@
       },
       function(){ // hover deactivated
         if( $(this).data("selected") ) {
-          $(this).css("color", "#tomato");
+          $(this).css("color", "tomato");
         } else {
           $(this).css("color", "");
         }

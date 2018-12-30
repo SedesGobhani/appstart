@@ -46,8 +46,8 @@ header {
   color: #6495ED; /* cornflowerblue */
   font-weight: bold;
   font-family: sans-serif;
-  white-space: nowrap;
-  overflow: hidden;
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
 }
 
 #logo, nav {
