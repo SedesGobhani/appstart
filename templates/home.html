@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block head %}
-    <script>document.title = "{{title}}"</script>
+    <script>document.title = "{{head.title}}"</script>
     {# commented out: <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css')}}"> #}
     {# If css doesn't work reload using Shift+Ctrl+R (clears cache) #}
 {% endblock %}
@@ -13,7 +13,9 @@
   <div id="logo-text"><p>Flask WebApp</p></div>
 </div>
 
+
 <nav>
+  <!-- js inserts menu here -->
 </nav>
 
 {% endblock %}
