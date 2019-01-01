@@ -1,30 +1,24 @@
 {% extends "layout.html" %}
 
+<!-- HEAD HTML BLOCK -->
 {% block head %}
-    <script>document.title = "{{head.title}}"</script>
-    {# commented out: <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css')}}"> #}
-    {# If css doesn't work reload using Shift+Ctrl+R (clears cache) #}
 {% endblock %}
 
+<!-- HEADER HTML BLOCK -->
 {% block header %}
-
-<div id="logo">
-  <img id="logo-pic" src="{{ url_for('static', filename='images/ic-logo.svg')}}">
-  <div id="logo-text"><p>Flask WebApp</p></div>
-</div>
-
-
-<nav>
-  <!-- js inserts menu here -->
-</nav>
-
 {% endblock %}
 
+<!-- MAIN BODY HTML BLOCK -->
 {% block main %}
-<h1>Main Area Content</h1>
-<h2>Some basic H2 text</h2>
+  <h1>Home Page Content Area</h1>
+  <h2>This is the "Home" page</h2>
 {% endblock %}
 
+<!-- FOOTER HTML BLOCK -->
+{% block footer %}
+{% endblock %}
+
+<!-- END OF BODY HTML BLOCK -->
 {% block endbody %}
 {% endblock %}
 

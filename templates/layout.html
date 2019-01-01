@@ -3,20 +3,28 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="{{url_for('static', filename='js/menu.js')}}"></script>
-    <script type=text/javascript>
-      var menu = {{header.links|tojson|safe}};
-      var colors = {{header.colors|tojson|safe}};
+    <script>
+      document.title = "{{head.title}}"
     </script>
     <link rel="icon" type="image/png" href="/static/favicon.ico">
     <link rel="stylesheet" type="text/css" href="./static/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./static/css/styles.css">
     {% block head %}
     {% endblock %}
-    <title>Layout Title</title>
   </head>
   <body>
     <header>
+      <div id="logo">
+        <img id="logo-pic" src="{{ url_for('static', filename='images/ic-logo.svg')}}">
+        <div id="logo-text"><p>Flask WebApp</p></div>
+      </div>
+      <nav>
+        <!-- js inserts menu here -->
+      </nav>
+      <script type=text/javascript>
+        var header = {{header|tojson|safe}}; {# from Flask server #}
+      </script>
+      <script type=text/javascript src="{{url_for('static', filename='js/header.js')}}"></script>
       {% block header %}
       {% endblock %}
     </header>
