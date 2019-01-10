@@ -37,9 +37,19 @@ header {
   font-size: 20px;
 }
 
+#logo, #navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
 #logo img {
   filter: invert(1);
   margin: 0px 10px;
+
 }
 
 #logo-text {
@@ -50,24 +60,17 @@ header {
   /* overflow: hidden; */
 }
 
-#logo, nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  display: inline-flex;
-  flex-wrap: wrap;
-}
-
-nav {
+#navbar {
     margin: 0px 20px;
 }
 
-nav a {
+
+#navbar a {
   margin: 2px 2px;
   padding: 4px 4px;
   text-decoration: none;
   font-size: 16px;
   border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
 }
-

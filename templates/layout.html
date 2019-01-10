@@ -2,13 +2,40 @@
 
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       document.title = "{{head.title}}"
     </script>
     <link rel="icon" type="image/png" href="/static/favicon.ico">
     <link rel="stylesheet" type="text/css" href="./static/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./static/css/styles.css">
+
+    <style type="text/css">
+      /* Jinja values in header menu */
+      header {
+        color: {{header.colors.foreground}};
+        background-color: {{header.colors.background}};
+      }
+      /* Default button colors */
+      #navbar a {
+        color: {{header.colors.button_foreground}};
+        background-color: {{header.colors.button_background}};
+        border-color: {{header.colors.button_border}};
+      }
+      /* Hovered button colors */
+      #navbar a:hover {
+        color: {{header.colors.hvrbtn_foreground}};
+        background-color: {{header.colors.hvrbtn_background}};
+        border-color: {{header.colors.hvrbtn_border}};
+      }
+      /* Button colors for class='selected' */
+      #navbar a.selected {
+        color: {{header.colors.selbtn_foreground}};
+        background-color: {{header.colors.selbtn_background}};
+        border-color: {{header.colors.selbtn_border}};
+      }
+
+    </style>
+
     {% block head %}
     {% endblock %}
   </head>
@@ -24,7 +51,6 @@
       <script type=text/javascript>
         var header = {{header|tojson|safe}}; {# from Flask server #}
       </script>
-      <script type=text/javascript src="{{url_for('static', filename='js/header.js')}}"></script>
       {% block header %}
       {% endblock %}
     </header>
@@ -36,7 +62,8 @@
       {% block footer %}
       {% endblock %}
     </footer>
-    {% block endbody %}
-    {% endblock %}
+      {% block endbody %}
+      {% endblock %}
+      <script type=text/javascript src="{{url_for('static', filename='js/header.js')}}"></script>
   </body>
 </html>
